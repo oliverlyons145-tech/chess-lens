@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Chess Lens" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="./icon.png" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Chess Lens</title>
+    <script type="module" crossorigin src="./assets/index-CDL7yqzx.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-fAg66HVk.css">
+  </head>
+  <body>
+    <video id="cam" playsinline muted autoplay></video>
+    <canvas id="overlay"></canvas>
+
+    <div id="top"><div id="status"></div></div>
+    <div id="bottom">
+      <div id="banner"></div>
+      <div id="turn"></div>
+      <div id="buttons"></div>
+    </div>
+
+    <div id="intro">
+      <h1>Chess Lens</h1>
+      <ol>
+        <li>Set up the pieces in the <b>starting position</b>.</li>
+        <li>Point the camera at the board so <b>all 64 squares</b> are in view.</li>
+        <li>Wait for the <b style="color:#19e6ff">cyan outline</b>. It works out White's side and puts <b>a1</b> on White's left corner. Wrong corner? Tap <b>Rotate</b>.</li>
+        <li>It works out your colour (the pieces nearest you). Wrong? Tap <b>You:</b> to switch. Then tap <b>Start</b>.</li>
+        <li>Play. On <b>your</b> turn the best move lights up <b style="color:#4dff73">green</b> and is read out; on your opponent's turn it just watches. Keep the board in view so it sees every move.</li>
+      </ol>
+      <p class="small">Misread move? <b>Undo</b>. Keep the app open: the camera stops if you lock the phone.</p>
+      <button id="go" class="primary">Start camera</button>
+      <p id="introError" class="error"></p>
+      <p id="engineState" class="small">Loading engine…</p>
+    </div>
+
+  </body>
+</html>
